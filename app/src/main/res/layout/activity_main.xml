@@ -27,7 +27,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:background="?attr/colorControlHighlight"
-        android:text="YOGASANA"
+        android:text="@string/yogasana"
         android:textSize="30sp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

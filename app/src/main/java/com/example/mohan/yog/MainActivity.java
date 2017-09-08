@@ -1,7 +1,11 @@
 package com.example.mohan.yog;
 
+import android.app.IntentService;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.menu.ActionMenuItemView;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,14 +21,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends Activity {
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
-    }
-
-
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,16 +63,33 @@ public class MainActivity extends Activity {
 
         // Create an ArrayAdapter from List
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
-                (this, android.R.layout.simple_list_item_1, yog_list);
-
-
-
+                (this, android.R.layout.simple_list_item_1, android.R.id.text1, yog_list);
         // DataBind ListView with items from ArrayAdapter
         lv.setAdapter(arrayAdapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener()
+                              {
+                                    public void onItemClick(AdapterView<?> parent, View view,
+                                                            int position, long id){
+
+                                        for(int i=0;i<=30;i++) {
+
+                                            if (position == i) {
+                                                Intent myintent = new Intent(view.getContext(), Main2Activity.class);
+                                                startActivityForResult(myintent, i);
+                                            }
+                                        }
+
+
+
+                                        }
+                                      });
+
+                              }
+
 
     }
 
 
 
 
-}
