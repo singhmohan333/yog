@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,6 +24,8 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +33,6 @@ public class MainActivity extends Activity {
 
         // Get reference of widgets from XML layout
         final ListView lv = (ListView) findViewById(R.id.lv);
-
 
         // Initializing a new String Array
         String[] yog = new String[] {
@@ -57,8 +59,6 @@ public class MainActivity extends Activity {
                 "बाह्य प्राणायाम",
                 "भ्रामरी प्राणायाम",
                 "भस्त्रिका प्राणायाम",
-
-
         };
 
         // Create a List from String Array elements
@@ -72,5 +72,10 @@ public class MainActivity extends Activity {
 
         // DataBind ListView with items from ArrayAdapter
         lv.setAdapter(arrayAdapter);
+
     }
+
+
+
+
 }
