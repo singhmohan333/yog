@@ -5,22 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.mohan.yog.Main2Activity"
-    android:background="#fff0">
+    android:background="#ff8899">
+
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="368dp"
-        android:layout_height="205dp"
-        android:text="@string/textview2"
-        android:textSize="40sp"
-        tools:layout_editor_absoluteY="298dp"
-        tools:layout_editor_absoluteX="8dp" />
+        android:id="@+id/textView2"
+        android:layout_width="162dp"
+        android:layout_height="52dp"
+        android:text="@string/textview5"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.701" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="368dp"
-        android:layout_height="282dp"
-        app:srcCompat="@drawable/web"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp" />
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/download"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.206"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="ContentDescription" />
+
 </android.support.constraint.ConstraintLayout>

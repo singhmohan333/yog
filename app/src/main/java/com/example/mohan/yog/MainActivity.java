@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Get reference of widgets from XML layout
-        final ListView lv = (ListView) findViewById(R.id.lv);
+      final   ListView lv = (ListView) findViewById(R.id.lv);
 
         // Initializing a new String Array
         String[] yog = new String[] {
@@ -76,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
 
                                             if (position == i) {
                                                 Intent myintent = new Intent(view.getContext(), Main2Activity.class);
+
+                                                myintent.putExtra("yoga", id);
                                                 startActivityForResult(myintent, i);
                                             }
                                         }
