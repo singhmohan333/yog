@@ -38,15 +38,10 @@ public class Main2Activity extends Activity {
            // for(int i=0;i<=30;i++) {
 
 
-
-
-
-
-
               int[] array = getIntent().getIntArrayExtra("yoga");
 
                 ImageView imgView = (ImageView) findViewById(R.id.imageView4);
-                Drawable drawable = getResources().getDrawable(mArray[array]);
+                Drawable drawable = getResources().getDrawable(mArray[2]);
 
 
 
