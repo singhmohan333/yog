@@ -37,11 +37,12 @@ public class Main2Activity extends Activity {
 
            // for(int i=0;i<=30;i++) {
 
-
-              int[] array = getIntent().getIntArrayExtra("yoga");
+                            Intent mIntent = getIntent();
+                            String intValue = mIntent.getStringExtra("yog");
 
                 ImageView imgView = (ImageView) findViewById(R.id.imageView4);
-                Drawable drawable = getResources().getDrawable(mArray[2]);
+
+                Drawable drawable = getResources().getDrawable(mArray[intValue]);
 
 
 

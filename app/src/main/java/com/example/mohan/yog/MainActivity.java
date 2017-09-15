@@ -75,10 +75,13 @@ public class MainActivity extends AppCompatActivity {
                                         for(int i=0;i<=30;i++) {
 
                                             if (position == i) {
+
+
                                                 Intent myintent = new Intent(view.getContext(), Main2Activity.class);
 
-                                                myintent.putExtra("yoga", id);
-                                                startActivityForResult(myintent, i);
+                                                myintent.putExtra("yoga", yog);
+                                             //   startActivityForResult(myintent, i);
+                                                startActivity(myintent);
                                             }
                                         }
 
