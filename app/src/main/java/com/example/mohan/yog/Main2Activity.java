@@ -36,9 +36,16 @@ public class Main2Activity extends Activity {
 
 
            // for(int i=0;i<=30;i++) {
+        Bundle extras = getIntent().getExtras();
+        String StringVariableName = extras.getString("StringVariableName");
 
-                            Intent mIntent = getIntent();
-                            String intValue = mIntent.getStringExtra("yog");
+        int intValue = Integer.parseInt( StringVariableName );
+
+
+
+
+                           // Intent mIntent = getIntent();
+                          // int intValue = mIntent.getIntExtra("yoga", 0);
 
                 ImageView imgView = (ImageView) findViewById(R.id.imageView4);
 

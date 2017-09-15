@@ -4,6 +4,7 @@ import android.app.IntentService;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.renderscript.Sampler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.menu.ActionMenuItemView;
 import android.view.MenuItem;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
       final   ListView lv = (ListView) findViewById(R.id.lv);
 
         // Initializing a new String Array
-        String[] yog = new String[] {
+      final   String[] yog = new String[] {
                 "अधोमुखश्वानासन",
                 "अधोमुखवृक्षासन",
                 "आकर्णधनुरासन",
@@ -77,9 +78,18 @@ public class MainActivity extends AppCompatActivity {
                                             if (position == i) {
 
 
-                                                Intent myintent = new Intent(view.getContext(), Main2Activity.class);
 
-                                                myintent.putExtra("yoga", yog);
+
+
+
+
+
+                                                Intent myintent = new Intent(view.getContext(), Main2Activity.class);
+                                                Bundle extras = new Bundle();
+                                                extras.putString("StringVariableName", yog.toString());
+                                                myintent.putExtras(extras);
+
+                                           //     myintent.putExtra("yoga", yog);
                                              //   startActivityForResult(myintent, i);
                                                 startActivity(myintent);
                                             }
